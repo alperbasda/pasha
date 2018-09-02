@@ -1,0 +1,239 @@
+﻿@model Mermer.Entity.Concrete.Site
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="portlet light portlet-fit portlet-form">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon-bubble font-green"></i>
+            <span class="caption-subject font-green bold uppercase">Site İşlemleri</span>
+        </div>
+
+    </div>
+    <div class="portlet-body">
+        <!-- BEGIN FORM-->
+        <form action="@Url.Action("EditSite","Site")" method="post" id="form_sample_2" class="form-horizontal">
+            <div class="form-body" style="margin-bottom: 250px">
+                <div class="alert alert-danger display-hide">
+                    <button class="close" data-close="alert"></button> Formdaki hataları düzeltin!!!
+                </div>
+                <div class="alert alert-success display-hide">
+                    <button class="close" data-close="alert"></button> Başarılı!!!
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Id
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+
+                                @if (Model != null)
+                                {
+                                    <input type="text" class="form-control" readonly="readonly" name="Id" value="@Model.Id"/> 
+                                }
+                                else
+                                {
+                                    <textarea type="text" class="form-control" readonly="readonly" name="Id"></textarea>
+                                }
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Giriş Yazısı Başlık
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                @if (Model != null)
+                                {
+                                    <textarea type="text" class="form-control" name="MainArticleTitle">@Model.MainArticleTitle</textarea>
+                                }
+                                else
+                                {
+                                    <textarea type="text" class="form-control" name="MainArticleTitle"></textarea>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Giriş Yazısı
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                @if (Model != null)
+                                {
+                                    <textarea type="text" class="form-control" name="MainArticle">@Model.MainArticle</textarea>
+                                }
+                                else
+                                {
+                                    <textarea type="text" class="form-control" name="MainArticle"></textarea>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Adres
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+
+                                @if (Model != null)
+                                {
+                                    <textarea type="text" class="form-control" name="Address">@Model.Address</textarea>
+                                }
+                                else
+                                {
+                                    <textarea type="text" class="form-control" name="Address"></textarea>
+                                }
+
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Mail adresi
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+
+                                @if (Model != null)
+                                {
+                                    <input type="text" class="form-control" name="Mail" value="@Model.Mail"/>
+                                }
+                                else
+                                {
+                                    <input type="text" class="form-control" name="Mail" value="" />
+                                }
+
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Telefon
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+
+                                @if (Model != null)
+                                {
+                                    <input type="text" class="form-control" name="Telephone" value="@Model.Telephone" />
+                                }
+                                else
+                                {
+                                    <input type="text" class="form-control" name="Mail" value="" />
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Hakkımızda
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                @if (Model != null)
+                                {
+                                    <textarea type="text" class="form-control" name="About">@Model.About</textarea>
+                                }
+                                else
+                                {
+                                    <textarea type="text" class="form-control" name="About"></textarea>
+                                }
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Misyon
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                @if (Model != null)
+                                {
+                                    <textarea type="text" class="form-control" name="Mission">@Model.Mission</textarea>
+                                }
+                                else
+                                {
+                                    <textarea type="text" class="form-control" name="Mission"></textarea>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Vizyon
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                @if (Model != null)
+                                {
+                                    <textarea type="text" class="form-control" name="Vision">@Model.Vision</textarea>
+                                }
+                                else
+                                {
+                                    <textarea type="text" class="form-control" name="Vision"></textarea>
+                                }
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <div class="row">
+                    <div class="container">
+                        <div class="pull-right">
+                            <button type="submit" class="btn green">Kaydet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- END FORM-->
+    </div>
+</div>

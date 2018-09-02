@@ -1,0 +1,190 @@
+﻿@using Mermer.Entity.Concrete
+@model Mermer.Entity.ComplexType.OrderViewModel
+@{
+    ViewBag.Title = "DetailOrder";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!-- BEGIN VALIDATION STATES-->
+<div class="portlet light portlet-fit portlet-form">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon-bubble font-green"></i>
+            <span class="caption-subject font-green bold uppercase">Sipariş Düzenle</span>
+        </div>
+        <div class="actions">
+            <div class="btn-group">
+                <a class="btn green btn-outline btn-circle btn-sm" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    Sil
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu pull-right">
+                    <li>
+                        <a href="@Url.Action("RemoveOrder","Order",new {id=Model.Id})">Siparişi Sil</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <!-- BEGIN FORM-->
+        <form action="@Url.Action("EditOrder","Order")" method="post" id="form_sample_2" class="form-horizontal">
+            <div class="form-body" style="margin-bottom: 280px">
+                <div class="alert alert-danger display-hide">
+                    <button class="close" data-close="alert"></button> Formdaki hataları düzeltin!!!
+                </div>
+                <div class="alert alert-success display-hide">
+                    <button class="close" data-close="alert"></button> Başarılı!!!
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Sipariş Id
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                <input type="text" readonly="readonly" class="form-control" name="Id" value="@Model.Id" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Alıcı İsim
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                <input type="text" class="form-control" name="CustomerFirstName" value="@Model.CustomerFirstName" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Alıcı Soyad
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                <input type="text" class="form-control" name="CustomerLastName" value="@Model.CustomerLastName" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Alıcı Mail
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                <input type="text" class="form-control" name="CustomerMail" value="@Model.CustomerMail" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Alıcı Telefon
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                <input type="text" class="form-control" name="CustomerTelephone" value="@Model.CustomerTelephone" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Kategori
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <select id="categories" class="selectpicker show-tick form-control" data-live-search="true">
+                                
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Ürün
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <select id="products" class="selectpicker show-tick form-control" name="ProductId" data-live-search="true"></select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Ürün Sayısı
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                <input id="productCount" type="text" class="form-control" name="ProductCount" value="@Model.ProductCount" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Acıklama
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                <textarea class="form-control" name="OrderDescription">@Model.OrderDescription</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Durum
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <select class="form-control" name="completed">
+                                <option value="1">Bekliyor</option>
+                                <option value="0">Tamamlandı</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="form-actions">
+                <div class="row">
+                    <div class="container">
+                        <div class="pull-right">
+                            <button type="submit" class="btn green">Kaydet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- END FORM-->
+    </div>
+</div>
+<!-- END VALIDATION STATES-->
+@section scripts
+{
+    <script src="~/Scripts/AdminAjax/Category2.js"></script>
+    <script>
+        $('#products').append('<option value="' + @Html.Raw(Json.Encode(Model.ProductId)) + '">' +@Html.Raw(Json.Encode(Model.ProductName)) + '</option>');
+    </script>
+}
+
+

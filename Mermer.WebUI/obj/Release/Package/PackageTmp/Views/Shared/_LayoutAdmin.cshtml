@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mermer Admin</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="PazarInsta Admin Paneli" name="description" />
+    <meta content="" name="author" />
+
+    <title>@ViewBag.Title</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminLayout/simple-line-icons.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    @RenderSection("head", required: false)
+    <link href="~/Content/AdminLayout/components-rounded.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminLayout/plugins.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminLayout/layout.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminLayout/blue.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminLayout/custom.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminValidation/select2.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminValidation/select2-bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminValidation/bootstrap-datepicker3.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminValidation/bootstrap-wysihtml5.css" rel="stylesheet" />
+    <link href="~/Content/AdminValidation/bootstrap-markdown.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+</head>
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid">
+    <div>
+
+        <!-- BEGIN HEADER -->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner ">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="@Url.Action("Index","Admin")">
+                        Mermer
+                    </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                    </div>
+                </div>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN PAGE TOP -->
+                <div class="page-top">
+
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                        <ul class="nav navbar-nav pull-right">
+                            <!-- BEGIN USER LOGIN DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-user">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <span class="username username-hide-on-mobile"> @HttpContext.Current.User.Identity.Name </span>
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="@Url.Action("SignOut","Account")">
+                                            <i class="fa fa-power-off"></i> Çıkış Yap
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END USER LOGIN DROPDOWN -->
+
+                        </ul>
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END PAGE TOP -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <!-- END SIDEBAR -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <div class="page-sidebar navbar-collapse collapse">
+                    <!-- BEGIN SIDEBAR MENU -->
+                    <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+                    <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+                    <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+                    <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                    <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+                    <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                    <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index","Admin")" class="nav-link">
+                                <i class="icon-home"></i>
+                                <span class="title">Anasayfa</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:;" class="nav-link">
+                                <i class="icon-diamond"></i>
+                                <span class="title">Siparişler</span>
+
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("CompletedOrders","Order")" class="nav-link">
+                                        <span class="title">Teslim Edilen Siparişler</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="@Url.Action("WaitingOrders","Order")" class="nav-link ">
+                                        <span class="title">Bekleyen Siparişler</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="@Url.Action("NewOrder","Order")" class="nav-link ">
+                                        <span class="title">Yeni Sipariş Ekle</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-envelope-letter"></i>
+                                <span class="title">Kategoriler</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("GetAllCategories","Category")" class="nav-link ">
+                                        <span class="title">Kategori Listesi</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="@Url.Action("NewCategory","Category")" class="nav-link ">
+                                        <span class="title">Yeni Kategori Ekle</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-briefcase"></i>
+                                <span class="title">Ürünler</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("GetAllProducts","Product")" class="nav-link ">
+                                        <span class="title">Ürün Listesi</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="@Url.Action("NewProduct","Product")" class="nav-link ">
+                                        <span class="title">Yeni Ürün Ekle</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index","Site")" class="nav-link nav-toggle">
+                                <i class="icon-book-open"></i>
+                                <span class="title">Site İşlemleri</span>
+                                <span class="arrow"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="@Url.Action("Galery","Galery")" class="nav-link nav-toggle">
+                                <i class="icon-anchor"></i>
+                                <span class="title">Galeri İşlemleri</span>
+                                <span class="arrow"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- END SIDEBAR MENU -->
+                </div>
+                <!-- END SIDEBAR -->
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+                    <!-- BEGIN PAGE HEADER-->
+                    <h1 class="page-title">
+                        Mermer
+                        <small>Admin Paneli</small>
+                    </h1>
+                    <div class="page-bar">
+                        <!-- BEGIN PAGE NAVIGATOR-->
+                        <ul class="page-breadcrumb">
+                            <li>
+                                <i class="icon-home"></i>
+                                <a href="@Url.Action("Index","Admin")">Mermer</a>
+                                <i class="fa fa-angle-right"></i>
+                            </li>
+                            <li id="navigate">
+
+                            </li>
+
+                        </ul>
+                        <!-- END PAGE NAVIGATOR-->
+
+                    </div>
+                    <div id="notification"></div>
+                    <!-- END PAGE HEADER-->
+                    <div>
+                        @RenderBody()
+                    </div>
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+
+        </div>
+        <!-- END CONTAINER -->
+
+
+
+
+    </div>
+
+
+    <!-- BEGIN THEME LAYOUT SCRIPTS -->
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/AdminLayout/js.cookie.min.js"></script>
+    <script src="~/Scripts/AdminLayout/jquery.slimscroll.min.js"></script>
+    <script src="~/Scripts/AdminLayout/jquery.blockui.min.js"></script>
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/AdminValidation/select2.full.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/additional-methods.min.js"></script>
+    @RenderSection("scripts2", required: false)
+    <script src="~/Scripts/AdminValidation/bootstrap-datepicker.min.js"></script>
+    <script src="~/Scripts/AdminValidation/wysihtml5-0.3.0.js"></script>
+    <script src="~/Scripts/AdminValidation/bootstrap-wysihtml5.js"></script>
+    <script src="~/Scripts/AdminValidation/ckeditor.js"></script>
+    <script src="~/Scripts/AdminValidation/markdown.js"></script>
+    <script src="~/Scripts/AdminValidation/bootstrap-markdown.js"></script>
+    <script src="~/Scripts/AdminLayout/app.min.js"></script>
+    @RenderSection("scripts3", required: false)
+    <script src="~/Scripts/AdminLayout/layout.min.js"></script>
+    <script src="~/Scripts/AdminLayout/demo.min.js"></script>
+    <script src="~/Scripts/AdminLayout/quick-sidebar.min.js"></script>
+    <script src="~/Scripts/AdminLayout/quick-nav.min.js"></script>
+    <script src="~/Scripts/AdminLayout/sidebar-active.js"></script>
+    <script src="~/Scripts/bootstrap-select.js"></script>
+    @RenderSection("scripts4", required: false)
+    <!-- END THEME LAYOUT SCRIPTS -->
+    <script>
+        $(document).ready(function () {
+            $('#clickmewow').click(function () {
+                $('#radio1003').attr('checked', 'checked');
+            });
+        })
+    </script>
+
+
+
+</body>
+</html>
+

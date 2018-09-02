@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "WaitingOrders";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section head
+{
+    <link href="~/Content/AdminDatatables/datatables.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminDatatables/datatables.bootstrap.css" rel="stylesheet" />
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="portlet light flip-scroll">
+            <div class="portlet-title">
+                <div class="caption font-dark">
+                    <i class="icon-settings font-dark"></i>
+                    <span class="caption-subject bold uppercase">Bekleyen Siparişler</span>
+                </div>
+                <div class="actions">
+                    <a href="@Url.Action("CompletedOrders","Order")" class="btn btn-success btn-sm btn-circle">
+                        Tamamlanmış Siparişler
+                    </a>
+
+                </div>
+            </div>
+            <div class="portlet-body">
+
+                <table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
+                    <thead>
+                    <tr class="">
+                        <th>Alıcı</th>
+                        <th>Alıcı Mail</th>
+                        <th>Alıcı Telefon</th>
+                        <th>Sipariş Tarihi</th>
+                        <th>Ürün Adı</th>
+                        <th>Ürün Miktarı</th>
+                        <th>Detay</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="datas">
+                            <td>@item.CustomerFirstName @item.CustomerLastName</td>
+                            <td>@item.CustomerMail</td>
+                            <td>@item.CustomerTelephone</td>
+                            <td>@item.OrderDate.ToShortDateString()</td>
+                            <td><a href="@Url.Action("DetailProduct","Product",new {id=item.ProductId })"> @item.ProductName</a></td>
+                            <td>@item.ProductCount</td>
+                            <td><a href="@Url.Action("DetailOrder","Order",new {id=item.Id})"><i style="color:greenyellow" class="fa fa-book"></i></a></td>
+                        </tr>
+                    }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/AdminDatatables/datatable.min.js"></script>
+    <script src="~/Scripts/AdminDatatables/datatables.min.js"></script>
+    <script src="~/Scripts/AdminDatatables/datatables.bootstrap.js"></script>
+    <script src="~/Scripts/AdminDatatables/table-datatables-fixedheader.min.js"></script>
+}

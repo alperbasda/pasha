@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0057FD3-12D1-46B2-88AB-DB4636133B4B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mermer.DataAccess</RootNamespace>
+    <AssemblyName>Mermer.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\ICategoryDal.cs" />
+    <Compile Include="Abstract\IGalleryDal.cs" />
+    <Compile Include="Abstract\IOrderDal.cs" />
+    <Compile Include="Abstract\IProductDal.cs" />
+    <Compile Include="Abstract\IProductImageDal.cs" />
+    <Compile Include="Abstract\IRoleDal.cs" />
+    <Compile Include="Abstract\ISiteDal.cs" />
+    <Compile Include="Abstract\IUserDal.cs" />
+    <Compile Include="Abstract\IUserInRoleDal.cs" />
+    <Compile Include="Concrete\CategoryDal.cs" />
+    <Compile Include="Concrete\GalleryImageDal.cs" />
+    <Compile Include="Concrete\Map\CategoryMap.cs" />
+    <Compile Include="Concrete\Map\GalleryMap.cs" />
+    <Compile Include="Concrete\Map\OrderMap.cs" />
+    <Compile Include="Concrete\Map\ProductImageMap.cs" />
+    <Compile Include="Concrete\Map\ProductMap.cs" />
+    <Compile Include="Concrete\Map\RoleMap.cs" />
+    <Compile Include="Concrete\Map\SiteMap.cs" />
+    <Compile Include="Concrete\Map\UserInRoleMap.cs" />
+    <Compile Include="Concrete\Map\UserMap.cs" />
+    <Compile Include="Concrete\MermerContext.cs" />
+    <Compile Include="Concrete\OrderDal.cs" />
+    <Compile Include="Concrete\ProductDal.cs" />
+    <Compile Include="Concrete\ProductImageDal.cs" />
+    <Compile Include="Concrete\RoleDal.cs" />
+    <Compile Include="Concrete\SiteDal.cs" />
+    <Compile Include="Concrete\UserDal.cs" />
+    <Compile Include="Concrete\UserInRoleDal.cs" />
+    <Compile Include="Helpers\AdminIndexBuilder\IndexBuilder.cs" />
+    <Compile Include="Migrations\201809010755313_asd.cs" />
+    <Compile Include="Migrations\201809010755313_asd.Designer.cs">
+      <DependentUpon>201809010755313_asd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809010905370_asdfd.cs" />
+    <Compile Include="Migrations\201809010905370_asdfd.Designer.cs">
+      <DependentUpon>201809010905370_asdfd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mermer.Core\Mermer.Core.csproj">
+      <Project>{2F87143B-E888-4462-BFDB-DD78A22CF7F0}</Project>
+      <Name>Mermer.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mermer.Entity\Mermer.Entity.csproj">
+      <Project>{22E08E54-4357-4C1D-94A4-28D68BD59B0F}</Project>
+      <Name>Mermer.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201809010755313_asd.resx">
+      <DependentUpon>201809010755313_asd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809010905370_asdfd.resx">
+      <DependentUpon>201809010905370_asdfd.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

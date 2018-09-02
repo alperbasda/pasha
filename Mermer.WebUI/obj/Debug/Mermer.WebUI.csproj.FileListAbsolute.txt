@@ -1,0 +1,144 @@
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\ApplicationInsights.config
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\roslyn\csc.exe
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\roslyn\System.Collections.Immutable.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\roslyn\vbc.exe
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\roslyn\VBCSCompiler.exe
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\roslyn\VBCSCompiler.exe.config
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Mermer.WebUI.dll.config
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Mermer.WebUI.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Mermer.WebUI.pdb
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Antlr3.Runtime.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Mermer.Business.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Mermer.Core.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.AI.Web.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.AI.WindowsServer.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.ApplicationInsights.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.Web.Infrastructure.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Newtonsoft.Json.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Ninject.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.Web.Helpers.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.Web.Mvc.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.Web.Optimization.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.Web.Razor.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.Web.WebPages.Deployment.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.Web.WebPages.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.Web.WebPages.Razor.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\WebGrease.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\FluentValidation.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Mermer.Entity.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\EntityFramework.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Mermer.DataAccess.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\PostSharp.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.ValueTuple.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Mermer.Business.pdb
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Mermer.Core.pdb
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.AI.Web.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.AI.WindowsServer.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.ApplicationInsights.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Ninject.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.Web.Helpers.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.Web.Mvc.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.Web.Optimization.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.Web.Razor.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.Web.WebPages.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.Web.WebPages.Deployment.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.Web.WebPages.Razor.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Antlr3.Runtime.pdb
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Newtonsoft.Json.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\FluentValidation.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Mermer.Entity.pdb
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\EntityFramework.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\Mermer.DataAccess.pdb
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\PostSharp.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\bin\System.ValueTuple.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\obj\Debug\Mermer.WebUI.csprojResolveAssemblyReference.cache
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\obj\Debug\Mermer.WebUI.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.WebUI\obj\Debug\Mermer.WebUI.pdb
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\ApplicationInsights.config
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\roslyn\csc.exe
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\roslyn\vbc.exe
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\roslyn\VBCSCompiler.exe
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Mermer.WebUI.dll.config
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Mermer.WebUI.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Mermer.WebUI.pdb
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Antlr3.Runtime.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Mermer.Business.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Mermer.Core.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Mermer.Entity.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.AI.Web.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.ApplicationInsights.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Newtonsoft.Json.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Ninject.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.Web.Helpers.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.Web.Mvc.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.Web.Optimization.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.Web.Razor.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.Web.WebPages.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.Web.WebPages.Razor.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\WebGrease.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\FluentValidation.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Mermer.DataAccess.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\PostSharp.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\EntityFramework.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.ValueTuple.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Mermer.Business.pdb
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Mermer.Core.pdb
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Mermer.Entity.pdb
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.AI.Web.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.ApplicationInsights.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Ninject.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.Web.Helpers.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.Web.Mvc.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.Web.Optimization.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.Web.Razor.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.Web.WebPages.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.Web.WebPages.Razor.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Antlr3.Runtime.pdb
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Newtonsoft.Json.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\FluentValidation.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\Mermer.DataAccess.pdb
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\PostSharp.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\EntityFramework.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\System.ValueTuple.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\obj\Debug\Mermer.WebUI.csprojResolveAssemblyReference.cache
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\obj\Debug\Mermer.WebUI.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\obj\Debug\Mermer.WebUI.pdb
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\EntityFramework.SqlServer.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.WebUI\bin\EntityFramework.SqlServer.xml

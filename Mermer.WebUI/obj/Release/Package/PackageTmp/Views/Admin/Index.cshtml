@@ -1,0 +1,103 @@
+﻿@model Mermer.Entity.ComplexType.IndexViewModel
+@{
+    ViewBag.Title = "Anasayfa";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+}
+
+<div class="row">
+    
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="dashboard-stat2 ">
+            <div class="display">
+                <div class="number">
+                    <h3 class="font-red-haze">
+                        <span data-counter="counterup" data-value="1349">@Model.ProductCount</span>
+                    </h3>
+                    <small>Ürün Sayısı</small>
+                </div>
+                <div class="icon">
+                    <i class="icon-like"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="dashboard-stat2 ">
+            <div class="display">
+                <div class="number">
+                    <h3 class="font-blue-sharp">
+                        <span data-counter="counterup" data-value="567">@Model.WaitingOrdersCount</span>
+                    </h3>
+                    <small>Toplam Bekleyen Sipariş</small>
+                </div>
+                <div class="icon">
+                    <i class="icon-basket"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="dashboard-stat2 ">
+            <div class="display">
+                <div class="number">
+                    <h3 class="font-purple-soft">
+                        <span data-counter="counterup" data-value="276">@Model.CompletedOrdersCount</span>
+                    </h3>
+                    <small>Toplam Tamamlanmış Sipariş</small>
+                </div>
+                <div class="icon">
+                    <i class="icon-bag"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12 col-xs-12 col-sm-12">
+        <div class="portlet light ">
+            <div class="portlet-title tabbable-line">
+                <div class="caption">
+                    <i class="icon-bubbles font-dark hide"></i>
+                    <span class="caption-subject font-dark bold uppercase">Bekleyen Siparişler</span>
+                </div>
+
+            </div>
+            <div class="portlet-body">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="portlet_comments_1">
+
+
+                        @foreach (var order in Model.WaitingOrders)
+                        {
+        <!-- BEGIN: Comments -->
+                            <div class="mt-comments">
+                                <div class="mt-comment">
+                                    <div class="mt-comment-img">
+                                        <img src="@order.ProductImagePath" />
+                                    </div>
+                                    <div class="mt-comment-body">
+                                        <div class="mt-comment-info">
+                                            <span class="mt-comment-author">@order.CustomerFirstName  @order.CustomerLastName</span>
+                                            <span class="mt-comment-date">@order.OrderDate</span>
+                                        </div>
+                                        <div class="mt-comment-text"> @order.OrderDescription </div>
+                                        <div class="mt-comment-details">
+                                            <a href="@Url.Action("DetailOrder","Order",new {id=order.Id})"> <span class="mt-comment-status mt-comment-status-pending">Detaylı Gör</span> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        <!-- END: Comments -->
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

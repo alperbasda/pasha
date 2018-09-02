@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "Anasayfa";
+}
+<div class="circle-homepage">
+    <div id="preloader">
+        <div id="status">
+            <p class="center-text">
+                Sayfa Yükleniyor
+                <em>Lütfen Bekleyiniz...</em>
+            </p>
+        </div>
+    </div>
+    <div class="all-elements">
+        <div class="header">
+            <div>
+            <a href="#"><img class="img-responsive" style="width: 150px; height: 80px;margin:auto" src="~/Content/images/logo1.png"/></a>
+            </div>
+            <div class="decoration"></div>
+        </div>
+        <div class="header-clear"></div>
+        <ul>
+            <li>
+                <a href="@Url.Action("Anasayfa","Home")">
+                    <i class="fa fa-home bg-red1"></i>
+                    <em>Anasayfa</em>
+                </a>
+            </li>
+            <li>
+                <a href="/Home/Anasayfa#hakkimizda">
+                    <i class="fa fa-cog bg-green2"></i>
+                    <em>Hakkımızda</em>
+                </a>
+            </li>
+            <li>
+                <a href="/Home/Anasayfa#galeri">
+                    <i class="fa fa-camera bg-blue2"></i>
+                    <em>Galeri</em>
+                </a>
+            </li>
+            <li>
+                <a href="/Home/Anasayfa#urunler">
+                    <i class="fa fa-image bg-magenta2"></i>
+                    <em>Ürünler</em>
+                </a>
+            </li>
+            <li>
+                <a href="/Home/Anasayfa#iletisim">
+                    <i class="fa fa-mobile bg-orange2"></i>
+                    <em>İletişim</em>
+                </a>
+            </li>
+            <li>
+                <a onclick="window.location='http://www.google.com'">
+                    <i class="fa fa-sign-out bg-teal2"></i>
+                    <em>Çıkış</em>
+                </a>
+            </li>
+        </ul>
+        <div class="content">
+            <div class="decoration"></div>
+        </div>
+        <div class="footer">
+            <div class="center-socials">
+                <a href="#" class="facebook-color facebook-social"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="google-color google-social"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="twitter-color twitter-social"><i class="fa fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

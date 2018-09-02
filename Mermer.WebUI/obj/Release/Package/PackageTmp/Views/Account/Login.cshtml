@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+@{
+    Layout = null;
+}
+
+<html lang="en">
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>Pasha Admin Paneli</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="InstaShop Admin Panel" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminLayout/simple-line-icons.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminLogin/select2.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminLogin/select2-bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminLayout/components-rounded.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminLayout/plugins.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminLogin/login-2.min.css" rel="stylesheet" />
+    <!-- END THEME LAYOUT STYLES -->
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<!-- END HEAD -->
+<body class=" login">
+    <!-- BEGIN LOGO -->
+    <div class="logo">
+        <a style="text-decoration: none" href="@Url.Action("Index", "Home")">
+            <h3>
+                <b> Pasha Admin Paneli  </b>
+            </h3>
+        </a>
+    </div>
+    <!-- END LOGO -->
+    <!-- BEGIN LOGIN -->
+    <div class="content">
+        <!-- BEGIN LOGIN FORM -->
+        <form class="login-form" action="@Url.Action("Login","Account")" method="post">
+            <div class="form-title text-center">
+                <span class="form-title">Hoş Geldiniz</span>
+
+            </div>
+            <div class="alert alert-danger display-hide">
+                <button class="close" data-close="alert"></button>
+                <span> Kullanıcı adi ve şifrenizi girin </span>
+            </div>
+            <div class="form-group">
+                <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+                <label class="control-label visible-ie8 visible-ie9">Username</label>
+                <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Kullanıcı adı" name="UserName" />
+            </div>
+            <div class="form-group">
+                <label class="control-label visible-ie8 visible-ie9">Password</label>
+                <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Şifre" name="Password" />
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn red btn-block uppercase">Giriş</button>
+            </div>
+            <div class="form-actions">
+                <div class="text-center">
+                    <label class="rememberme mt-checkbox mt-checkbox-outline">
+                        <input type="checkbox" name="RememberMe" value="1" /> Beni Hatırla
+                        <span></span>
+                    </label>
+                </div>
+
+            </div>
+
+        </form>
+        <!-- END LOGIN FORM -->
+
+
+    </div>
+    <div class="copyright hide"> 2018 © Uzaylılar tarafından düzenlenmiştir. </div>
+    <!-- BEGIN THEME LAYOUT SCRIPTS -->
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/AdminLayout/js.cookie.min.js"></script>
+    <script src="~/Scripts/AdminLayout/jquery.slimscroll.min.js"></script>
+    <script src="~/Scripts/AdminLayout/jquery.blockui.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/additional-methods.min.js"></script>
+    <script src="~/Scripts/AdminLogin/select2.full.min.js"></script>
+    <script src="~/Scripts/AdminLayout/app.min.js"></script>
+    <script src="~/Scripts/AdminLogin/login.min.js"></script>
+    <!-- END THEME LAYOUT SCRIPTS -->
+    <script>
+        $(document).ready(function () {
+            $('#clickmewow').click(function () {
+                $('#radio1003').attr('checked', 'checked');
+            });
+        })
+    </script>
+</body>
+</html>

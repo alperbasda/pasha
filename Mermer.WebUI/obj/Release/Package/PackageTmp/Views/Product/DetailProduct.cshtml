@@ -1,0 +1,192 @@
+﻿@model Mermer.Entity.ComplexType.ProductViewModel
+@{
+    ViewBag.Title = "DetailProduct";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section head
+{
+    <link href="~/Content/AdminValidation/all.css" rel="stylesheet" />
+
+}
+<!-- BEGIN VALIDATION STATES-->
+<div class="portlet light portlet-fit portlet-form">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="icon-bubble font-green"></i>
+            <span class="caption-subject font-green bold uppercase" data-key="@Model.Id">Ürün Düzenle</span>
+        </div>
+        <div class="actions">
+            <div class="btn-group">
+                <a class="btn green btn-outline btn-circle btn-sm" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    Yeni
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <ul class="dropdown-menu pull-right">
+                    <li>
+                        <a href="@Url.Action("NewCategory","Category")">Kategori Ekle</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("NewProduct","Product")">Ürün Ekle</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="portlet-body">
+        <!-- BEGIN FORM-->
+        <form data-pid="@Model.Id" id="form_sample_2" class="form-horizontal">
+            <div class="form-body" style="margin-bottom: 250px">
+                <div class="alert alert-danger display-hide">
+                    <button class="close" data-close="alert"></button> Formdaki hataları düzeltin!!!
+                </div>
+                <div class="alert alert-success display-hide">
+                    <button class="close" data-close="alert"></button> Başarılı!!!
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Kategori
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <select id="categories" name="CategoryId" class="selectpicker show-tick form-control" data-live-search="true"></select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Ürün Adı
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                <input type="text" class="form-control" name="Name" id="productName" value="@Model.Name" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Ürün Açıklaması
+                            <span class="required"> * </span>
+                        </label>
+                        <div class="col-md-9">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                <input type="text" class="form-control" name="Description" id="productDescription" value="@Model.Description" />
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Temel Bilgiler Düzenle
+                            
+                        </label>
+                        <div class="col-md-9 pull-right">
+                            <div class="input-icon right">
+                                <i class="fa"></i>
+                                <input type="button" class="btn btn-success" name="Description" id="defaultValueUpdate" value="Kaydet" />
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label col-md-3">
+                            Resim Ekle/Sil
+                        </label>
+                        <div class="col-md-7">
+                            <label class="btn btn-success" data-toggle="modal" data-target="#imageModal"><i class="fa fa-plus"></i> Yeni</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </form>
+        <!-- END FORM-->
+    </div>
+</div>
+<!-- END VALIDATION STATES-->
+<!--BEGIN IMAGE MODAL-->
+
+<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myLabel">Yeni Resim</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <div class="input-icon right">
+                            <input type="button" value="Resim Seç" id="btnUploadShow" class="btn btn-primary btn-sm" />
+                        </div>
+                    </div>
+                    <div class="progress col-md-9">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="myprogress">0 %</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-3">
+                        Resim açıklaması
+                    </label>
+                    <div class="col-md-9">
+                        <div class="input-icon right">
+                            <input type="text" class="form-control" id="imageDesc" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group" id="images">
+                        @if (Model.Images != null)
+                        {
+
+                            foreach (var item in Model.Images)
+                            {
+                                <div class="col-lg-2 col-md-2"><img onclick="removeImage(this)" class="img-responsive" src="@item.Path" alt="Ürün Resim" /></div>
+                            }
+                        }
+
+                    </div>
+                    <input type="file" name="file" id="uploadImageInput" value="Yeni Resim" style="display:none" />
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="form-group">
+                    <label class="control-label col-md-6 pull-left">
+                        <span style="color: red; font-size: 9px">Resim secmeden önce açıklama giriniz</span>
+                    </label>
+                    <div class="col-md-6">
+                        <div class="input-icon right">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Kapat</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--END IMAGE MODAL-->
+@section scripts
+{
+}
+
+@section scripts4
+{
+
+    <script src="~/Scripts/AdminValidation/icheck.min.js"></script>
+    <script src="~/Scripts/AdminAjax/AdminProducts.js"></script>
+
+    
+}

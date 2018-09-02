@@ -1,0 +1,142 @@
+﻿@model Mermer.Entity.ComplexType.ProductViewModel
+@{
+    ViewBag.Title = "Fiyat Al";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="preloader">
+    <div id="status">
+        <p class="center-text">
+            Sayfa Yükleniyor
+            <em>Lütfen Bekleyiniz...</em>
+        </p>
+    </div>
+</div>
+<div class="all-elements">
+    <div class="header" style="margin-top:-20px">
+        <a href="@Url.Action("Anasayfa")"><img class="img-responsive" style="width: 100px; height: 50px; margin:0 auto 15px auto" src="~/Content/images/logo1.png" /></a>
+        <div class="decoration"></div>
+    </div>
+    <div class="header-clear"></div>
+
+
+    <div class="menu-background"></div>
+    <div class="content-heading">
+        <h4>Fiyat İste</h4>
+        <p>Lütfen tüm alanları eksiksiz doldurunuz</p>
+        <div class="overlay"></div>
+        <a class="bg-green2 show-share-bottom back" href="@Url.Action("Anasayfa")"><i class="fa fa-share"></i></a>
+    </div>
+    <div class="content">
+        <div class="decoration"></div>
+        
+        <div class="one-half-responsive">
+            <h4 class="lastSeen">Fiyat Isteyin!</h4>
+            <div class="container no-bottom">
+                <div class="contact-form no-bottom">
+                    <form action="@Url.Action("SaveOrder",new { ProductId =Model.Id})" method="post" class="contactForm" id="contactForm">
+                        <fieldset>
+                            <div class="formValidationError" id="contactNameFieldError">
+                                <div class="static-notification-red tap-dismiss-notification">
+                                    <p class="center-text uppercase">İsim Giriniz!</p>
+                                </div>
+                            </div>
+                            <div class="formValidationError" id="contactEmailFieldError">
+                                <div class="static-notification-red tap-dismiss-notification">
+                                    <p class="center-text uppercase">Mail Giriniz!</p>
+                                </div>
+                            </div>
+                            <div class="formValidationError" id="contactEmailFieldError2">
+                                <div class="static-notification-red tap-dismiss-notification">
+                                    <p class="center-text uppercase">Geçerli Mail Giriniz!</p>
+                                </div>
+                            </div>
+                            <div class="formValidationError" id="contactMessageTextareaError">
+                                <div class="static-notification-red tap-dismiss-notification">
+                                    <p class="center-text uppercase">Message Boş Bırakılamaz!</p>
+                                </div>
+                            </div>
+                            <div class="formValidationError" id="contactTelephoneError">
+                                <div class="static-notification-red tap-dismiss-notification">
+                                    <p class="center-text uppercase">Telefonunuzu giriniz!</p>
+                                </div>
+                            </div>
+                            <div class="formFieldWrap">
+                                <label class="field-title contactNameField" for="contactNameField">Ad-Soyad:<span>(zorunlu)</span></label>
+                                <input type="text" name="CustomerFirstName" value="" class="contactField requiredField" id="contactNameField" />
+                            </div>
+                            <div class="formFieldWrap">
+                                <label class="field-title contactEmailField" for="contactEmailField">Mail Adresi: <span>(zorunlu)</span></label>
+                                <input type="text" name="CustomerMail" value="" class="contactField requiredField requiredEmailField" id="contactEmailField" />
+                            </div>
+                            <div class="formFieldWrap">
+                                <label class="field-title contactEmailField" for="contactEmailField">Telefon: <span>(zorunlu)</span></label>
+                                <input type="text" name="CustomerTelephone" value="" class="contactField requiredField" id="contactTelephoneField" />
+                            </div>
+                            <div class="formTextareaWrap">
+                                <label class="field-title contactMessageTextarea" for="contactMessageTextarea">Mesajınız: <span>(zorunlu)</span></label>
+                                <textarea name="OrderDescription" class="contactTextarea requiredField" id="contactMessageTextarea"></textarea>
+                            </div>
+                            <div class="formSubmitButtonErrorsWrap">
+                                <input type="submit" class="buttonWrap button button-green contactSubmitButton" id="contactSubmitButton" value="Fiyat Iste" data-formId="contactForm" />
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="decoration hide-if-responsive"></div>
+        <div class="one-half-responsive last-column">
+            <div class="container no-bottom">
+                <h4>Ürün Adı : @Model.Name</h4>
+                <p>
+                    <strong>Kategori </strong>
+                    <br /> @Model.CategoryName
+                </p>
+                <p>
+                    <strong>Ürün Açıklaması</strong>  
+                    <br/> @Model.Description
+                </p>
+                <p><strong>Ürün Resimleri</strong></p>
+                <div class="content" style="margin-left:0px">
+                    <div class="container">
+                        <div class="staff-slider" data-snap-ignore="true">
+                            <div>
+                                @foreach (var item in Model.Images)
+                                {
+                                    <div class="staff-item" style="float: left; padding-right: 30px;padding-top: 20px;">
+                                        <a class="swipebox" href="@item.Path" title="@Model.CategoryName-@Model.Name">
+                                            <img src="@item.Path" alt="@Model.CategoryName-@Model.Name" />
+                                        </a>
+                                    </div>
+                    
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="decoration"></div>
+    </div>
+    
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/Home/jquery.js"></script>
+    <script type="text/javascript">
+        $('#contactSubmitButton').click(function() {
+            $('.lastSeen').html('Siparişiniz alınmıştır. En kısa sürede tarafınıza dönüş sağlanacaktır!');
+        });
+        $('.back').click(function() {
+            window.location.href = '/Home/DeviceControl';
+        })
+    </script>
+
+}
+
+

@@ -1,0 +1,42 @@
+﻿@model Mermer.Entity.Concrete.Site
+
+<footer class="container-fluid" id="footer">
+    <div class="footerhr">
+    </div>
+    <div class="container" id="footeralt">
+        <div class="row">
+            <div class="col-4" id="footer2">
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Menu</h3>
+                <ul style="list-style-type: none">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Action("Index","Home")">ANASAYFA <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("AboutUs","Home")">HAKKIMIZDA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Galery","Home")">GALERİ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Products","Home")">ÜRÜNLER</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Contact","Home")">İLETİŞİM</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-4" id="footer1" style="color: white">
+                <h3>Hakkımızda</h3>
+                @Model.About
+            </div>
+            <div class="col-4" id="footer3">
+                <div class="d-flex flex-column">
+                    <h3>BİZE ULAŞIN</h3>
+                    <i class="fa fa-map"><span>@Model.Address</span></i>
+                    <i class="fa fa-phone"><a href="#">@Model.Telephone</a></i>
+                    <i class="fa fa-envelope"><a href="@Url.Action("Contact","Home")">@Model.Mail</a></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

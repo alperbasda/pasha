@@ -1,0 +1,56 @@
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\Mermer.Entity.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\Mermer.Entity.pdb
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\Mermer.Core.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\System.Web.Mvc.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\Ninject.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\EntityFramework.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\FluentValidation.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\PostSharp.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\System.Web.Razor.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\System.Web.WebPages.Razor.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\System.Web.WebPages.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\Microsoft.Web.Infrastructure.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\System.ValueTuple.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\System.Web.WebPages.Deployment.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\Mermer.Core.pdb
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\System.Web.Mvc.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\Ninject.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\EntityFramework.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\FluentValidation.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\PostSharp.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\System.Web.Razor.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\System.Web.WebPages.Razor.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\System.Web.WebPages.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\System.ValueTuple.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\bin\Debug\System.Web.WebPages.Deployment.xml
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\obj\Debug\Mermer.Entity.csprojResolveAssemblyReference.cache
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\obj\Debug\Mermer.Entity.dll
+c:\users\alper\documents\visual studio 2015\Projects\Mermer\Mermer.Entity\obj\Debug\Mermer.Entity.pdb
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\Mermer.Entity.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\Mermer.Entity.pdb
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\Mermer.Core.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\System.Web.Mvc.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\Ninject.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\EntityFramework.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\FluentValidation.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\PostSharp.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\System.Web.Razor.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\System.Web.WebPages.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\System.ValueTuple.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\Mermer.Core.pdb
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\System.Web.Mvc.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\Ninject.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\EntityFramework.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\FluentValidation.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\PostSharp.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\System.Web.Razor.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\System.Web.WebPages.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\System.ValueTuple.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\obj\Debug\Mermer.Entity.csprojResolveAssemblyReference.cache
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\obj\Debug\Mermer.Entity.dll
+C:\Users\alper\Desktop\Mermer Orjinal\Mermer\Mermer.Entity\obj\Debug\Mermer.Entity.pdb

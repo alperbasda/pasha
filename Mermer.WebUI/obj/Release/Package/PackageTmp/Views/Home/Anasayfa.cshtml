@@ -1,0 +1,248 @@
+﻿@model Mermer.Entity.ComplexType.OnepageModel
+
+@{
+    ViewBag.Title = "Anasayfa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="all-elements">
+    <div class="header" style="margin-top:-20px">
+        <a id="showMenu" style="cursor:pointer"><img class="img-responsive" style="width: 100px; height: 50px; margin:0 auto 15px auto" src="~/Content/images/logo1.png" /></a>
+        <button class="show-big-menu" href="#" hidden></button>
+        <div class="decoration"></div>
+    </div>
+    <div class="header-clear"></div>
+
+    <ul class="top-menu">
+        <li><a href="#" class="menuItem"><i class="fa fa-home bg-red1"></i>Anasayfa<i class="fa fa-circle"></i></a></li>
+        <li><a href="#urunler" class="menuItem"><i class="fa fa-image bg-blue2"></i>Ürünler<i class="fa fa-circle"></i></a></li>
+        <li><a href="#hakkimizda" class="menuItem"><i class="fa fa-cog bg-teal2"></i>Hakkımızda<i class="fa fa-circle"></i></a></li>
+        <li><a href="#iletisim" class="menuItem"><i class="fa fa-image bg-green2"></i>İletişim<i class="fa fa-circle"></i></a></li>
+        <li><a href="#galeri" class="menuItem"><i class="fa fa-cog bg-blue1"></i>Galeri<i class="fa fa-circle"></i></a></li>
+        <li><button id="kapat" hidden class="close-menu"><i class="fa fa-close bg-blue1"></i>Kapat<i class="fa fa-circle"></i></button></li>
+    </ul>
+
+    <div class="menu-background"></div>
+
+<div class="circle-slider half-bottom">
+    @if (Model.Categories.Count > 0)
+    {
+    
+    foreach (var item in Model.Categories)
+    {
+        <a href="#urunler">
+            <div data-cad="@item.Id" style="cursor: pointer" onclick="GetProducts(this)">
+                <img style="width: 500px;height:500px" src="@item.ImageUrl" alt="img">
+                <h1>@item.Name</h1>
+                <em>Ürünler için tıklayınız</em>
+            </div>
+        </a>
+        }
+    }
+</div>
+
+    <div id="urunler" class="content-heading">
+        <h4>Ürünler</h4>
+        <p class="categoryName">Tüm Ürünler</p>
+        <a href="#"><i class="fa fa-cog"></i></a>
+        <div class="overlay"></div>
+        <img src="images/pictures/1w.jpg" alt="img">
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="staff-slider" data-snap-ignore="true">
+                <div>
+                @if (Model.Products.Count > 0)
+                {
+
+                    foreach (var item in Model.Products)
+                     {
+                         <div class="staff-item staff-item2 @item.CategoryId" style="float: left; padding-right: 60px; padding-top: 20px;">
+                             <img style="width: 90px;height:90px" src="@item.Images[0].Path" alt="img">
+                             <h4>@item.Name</h4>
+                             <em>@item.Description</em>
+                             <a href="@Url.Action("ProductDetail", new {Id = item.Id})" class="round-button button-red center-button">Fiyat İste</a>
+                         </div>
+                     }
+                }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="galeri" class="content-heading">
+        <h4>Galeri</h4>
+        <a><i class="fa fa-camera"></i></a>
+        <div class="overlay"></div>
+        <img src="images/pictures/8w.jpg" alt="img">
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="staff-slider" data-snap-ignore="true">
+                <div>
+                @if (Model.Images.Count > 0)
+                {
+
+                    foreach (var item in Model.Images)
+                     {
+                         <div class="staff-item" style="float: left; padding-right: 30px; padding-top: 20px;">
+                             <a class="swipebox" href="@item.Path" title="@item.Description">
+                                 <img style="width: 90px;height:90px"  src="@item.Path" alt="@item.Description"/>
+                             </a>
+                             <h4>@item.Description</h4>
+
+                         </div>
+
+                     }
+                }
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="iletisim" class="content-heading">
+        <h4>BIZIMLE ILETISIME GECIN</h4>
+        <a><i class="fa fa-user"></i></a>
+        <div class="overlay"></div>
+        <img src="images/pictures/3w.jpg" alt="img">
+    </div>
+    <div class="content">
+        <div class="decoration"></div>
+        <div class="one-half-responsive">
+            <h4>Bize Yazın!</h4>
+            <p>yada telefon iletişim bilgilerimizi kullanabilirsiniz!</p>
+            <div class="container no-bottom">
+                <div class="contact-form no-bottom">
+                    <form action="@Url.Action("SendMail")" method="post" class="contactForm" id="contactForm">
+                        <fieldset>
+                            <div class="formValidationError" id="contactNameFieldError">
+                                <div class="static-notification-red tap-dismiss-notification">
+                                    <p class="center-text uppercase">İsim Giriniz!</p>
+                                </div>
+                            </div>
+                            <div class="formValidationError" id="contactEmailFieldError">
+                                <div class="static-notification-red tap-dismiss-notification">
+                                    <p class="center-text uppercase">Mail Giriniz!</p>
+                                </div>
+                            </div>
+                            <div class="formValidationError" id="contactEmailFieldError2">
+                                <div class="static-notification-red tap-dismiss-notification">
+                                    <p class="center-text uppercase">Geçerli Mail Giriniz!</p>
+                                </div>
+                            </div>
+                            <div class="formValidationError" id="contactMessageTextareaError">
+                                <div class="static-notification-red tap-dismiss-notification">
+                                    <p class="center-text uppercase">Message Boş Bırakılamaz!</p>
+                                </div>
+                            </div>
+                            <div class="formValidationError" id="contactTelephoneError">
+                                <div class="static-notification-red tap-dismiss-notification">
+                                    <p class="center-text uppercase">Telefonunuzu giriniz!</p>
+                                </div>
+                            </div>
+                            <div class="formFieldWrap">
+                                <label class="field-title contactNameField" for="contactNameField">Ad-Soyad:<span>(zorunlu)</span></label>
+                                <input type="text" name="name" value="" class="contactField requiredField" id="contactNameField" />
+                            </div>
+                            <div class="formFieldWrap">
+                                <label class="field-title contactEmailField" for="contactEmailField">Mail Adresi: <span>(zorunlu)</span></label>
+                                <input type="text" name="email" value="" class="contactField requiredField requiredEmailField" id="contactEmailField" />
+                            </div>
+                            <div class="formFieldWrap">
+                                <label class="field-title contactEmailField" for="contactEmailField">Telefon: <span>(zorunlu)</span></label>
+                                <input type="text" name="telephone" value="" class="contactField requiredField" id="contactTelephoneField" />
+                            </div>
+                            <div class="formTextareaWrap">
+                                <label class="field-title contactMessageTextarea" for="contactMessageTextarea">Mesajınız: <span>(zorunlu)</span></label>
+                                <textarea name="text" class="contactTextarea requiredField" id="contactMessageTextarea"></textarea>
+                            </div>
+                            <div class="formSubmitButtonErrorsWrap">
+                                <input type="submit" class="buttonWrap button button-green contactSubmitButton" id="contactSubmitButton" value="Gönder" data-formId="contactForm" />
+                            </div>
+                            <br />
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="decoration hide-if-responsive"></div>
+        <div class="one-half-responsive last-column">
+            <div class="container no-bottom">
+                <h4>İletişim</h4>
+                <p>
+                    <strong>Adres</strong><br>
+                    @Model.Site.Address
+                </p>
+                <p>
+                    <strong>İletişim Bilgileri:</strong><br>
+                    <a href="#" class="contact-call"><i class="fa fa-phone"></i>Telefon: @Model.Site.Telephone</a>
+                    <a href="#" class="contact-mail"><i class="fa fa-envelope"></i>Mail: @Model.Site.Mail</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="hakkimizda" class="content-heading">
+        <h4>Bizi Tanıyın</h4>
+        <a><i class="fa fa-quote-left"></i></a>
+        <div class="overlay"></div>
+        <img src="images/pictures/6w.jpg" alt="img">
+    </div>
+    <div class="content">
+        <div class="quote-slider full-bottom" data-snap-ignore="true">
+            <div>
+                <a>Hakkımızda</a>
+                <h4>
+                    @Model.Site.About
+                </h4>
+            </div>
+            <div>
+                <a>Vizyonumuz</a>
+                <h4>
+                    @Model.Site.Vision
+                </h4>
+
+            </div>
+            <div>
+                <a>Misyonumuz</a>
+                <h4>
+                    @Model.Site.Mission
+                </h4>
+            </div>
+        </div>
+    </div>
+    <div class="content-heading">
+        <h4>Hakkımızda</h4>
+        <a><i class="fa fa-star"></i></a>
+        <div class="overlay"></div>
+        <img src="images/pictures/7w.jpg" alt="img">
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="one-half-responsive">
+                <img src="@Model.Images[1].Path" alt="img" class="responsive-image">
+            </div>
+            <div class="one-half-responsive last-column">
+                <h3 class="center-if-mobile no-bottom">@Model.Site.MainArticleTitle</h3>
+                <p class="center-if-mobile half-bottom">
+                    @Model.Site.MainArticleTitle
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="preloader">
+    <div id="status">
+        <p class="center-text">
+            Sayfa Yükleniyor
+            <em>Lütfen Bekleyiniz...</em>
+        </p>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/Home/jquery.js"></script>
+}
